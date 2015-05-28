@@ -10,37 +10,37 @@ Vagrant set up to be used with the Symfony 1 Askeet tutorial.
 
 ## Setup
 
-1.	Add this entry to your hosts file (sudo vi /etc/hosts;): 127.0.0.1	askeet.local  
+1. Add this entry to your hosts file (sudo vi /etc/hosts;): `127.0.0.1	askeet.local`
 
-1.	Clone this git repo to your local computer
+1. Clone this git repo to your local computer
 
 		$ git clone git@github.com:SmellyFish/symfony1-askeet.git pardot-askeet
 
-2.	`cd` into the cloned repo directory
+2. `cd` into the cloned repo directory
 
 		$ cd pardot-askeet
 
-3.	Bring the Vagrant box up
+3. Bring the Vagrant box up
 
 		$ vagrant up --provider virtualbox
 
 4. Log in to the guest machine
 
 		$ vagrant ssh
-		
-5.	sudo vi /usr/share/pear/data/symfony/config/php.yml
-	a.	remove the magic_quotes_runtime directive
-	b.	remove the magic_quotes_gpc directive
-	c.	remove the register_globals directive
+	
+5. `sudo vi /usr/share/pear/data/symfony/config/php.yml`
+  1. remove the `magic_quotes_runtime` directive
+  2. remove the `magic_quotes_gpc` directive
+  3. remove the `register_globals` directive
     
-6.	sudo vi /usr/share/pear/symfony/cache/sfFileCache.class.php - comment out  set_magic_quotes_runtime(0); on line 484
+6. `sudo vi /usr/share/pear/symfony/cache/sfFileCache.class.php` - comment out `set_magic_quotes_runtime(0);` on line 484
     
-7.	sudo vi /usr/share/pear/symfony/symfony.php - change  ob_start(sfConfig::get('sf_compressed') ? 'ob_gzhandler' : ''); to  ob_start(sfConfig::get('sf_compressed') ? 'ob_gzhandler' : null); on line 132 (changed empty string to null there at the end)
+7. `sudo vi /usr/share/pear/symfony/symfony.php` - change  `ob_start(sfConfig::get('sf_compressed') ? 'ob_gzhandler' : '');` to  `ob_start(sfConfig::get('sf_compressed') ? 'ob_gzhandler' : null);` on line 132 (changed empty string to null there at the end)
     
 5. Navigate to the root of the askeet project
 
 		$ cd /var/www/askeet
-		
+	
 6. Begin the [askeet tutorial](http://symfony.com/legacy/doc/askeet/1_0/en/1) starting with initializing the Symfony project
 
 ## Notes
