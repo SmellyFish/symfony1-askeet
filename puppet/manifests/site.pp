@@ -50,27 +50,27 @@ apache::vhost { 'master':
   aliases => [
     {
       'alias'             => '/sf',
-      'path'              => '/usr/share/pear-data/symfony/web/sf',
+      'path'              => '/usr/share/pear/data/symfony/web/sf',
     },
   ],
 }
 
 class { 'php::cli':
   ensure           => latest,
-  cli_package_name => 'php56u-cli',
+  cli_package_name => 'php54-cli',
   require          => Yumrepo['ius'],
 }
 
 class { 'php::common':
   ensure              => latest,
-  common_package_name => 'php56u-common',
+  common_package_name => 'php54-common',
   require             => Yumrepo['ius'],
 }
 
 class { 'php::mod_php5':
   ensure           => latest,
   inifile          => '/etc/httpd/conf/php.ini',
-  php_package_name => 'php56u',
+  php_package_name => 'php54',
   require          => Yumrepo['ius'],
 }
 
@@ -85,8 +85,8 @@ php::ini { '/etc/php.ini':
   memory_limit   => '256M',
   sendmail_path  => '/usr/sbin/sendmail -t -i',
   date_timezone  => 'America/Chicago',
-  require        => [Yumrepo['ius'], Package['php56u-common']],
-  before         => Package['php56u'],
+  require        => [Yumrepo['ius'], Package['php54-common']],
+  before         => Package['php54'],
 }
 
 php::ini { '/etc/httpd/conf/php.ini':
@@ -115,7 +115,7 @@ file { 'duplicate_xdebug_ini':
   require => Php::Module::Ini['pecl-xdebug']
 }
 
-$pkgs = ['php56u-mysqlnd', 'php56u-devel', 'gcc', 'gcc-c++', 'autoconf', 'automake', 'php56u-intl']
+$pkgs = ['php54-mysqlnd', 'php54-devel', 'gcc', 'gcc-c++', 'autoconf', 'automake', 'php54-intl']
 
 package { $pkgs:
   ensure => installed,
@@ -137,7 +137,7 @@ class { 'mysql::server':
 }
 
 class { 'pear':
-  package => 'php56u-pear',
+  package => 'php54-pear',
   require => Class['php::cli'],
 }
 

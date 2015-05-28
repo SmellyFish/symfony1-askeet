@@ -27,7 +27,16 @@ Vagrant set up to be used with the Symfony 1 Askeet tutorial.
 4. Log in to the guest machine
 
 		$ vagrant ssh
-
+		
+5.	sudo vi /usr/share/pear/data/symfony/config/php.yml
+	a.	remove the magic_quotes_runtime directive
+	b.	remove the magic_quotes_gpc directive
+	c.	remove the register_globals directive
+    
+6.	sudo vi /usr/share/pear/symfony/cache/sfFileCache.class.php - comment out  set_magic_quotes_runtime(0); on line 484
+    
+7.	sudo vi /usr/share/pear/symfony/symfony.php - change  ob_start(sfConfig::get('sf_compressed') ? 'ob_gzhandler' : ''); to  ob_start(sfConfig::get('sf_compressed') ? 'ob_gzhandler' : null); on line 132 (changed empty string to null there at the end)
+    
 5. Navigate to the root of the askeet project
 
 		$ cd /var/www/askeet
@@ -36,14 +45,14 @@ Vagrant set up to be used with the Symfony 1 Askeet tutorial.
 
 ## Notes
 * The project is accessible by browser at http://askeet.local:8080/index.php
-* The box comes with Symfony 1.0.22 pre-installed.
+* The server is provisioned with Symfony 1.0.22
 * Host machine - the actual computer you're using. This machine is used to run Git commands, Vagrant commands, boot up the guest machine, etc.
 * Guest machine - the virtual server spun up by the host machine via Vagrant. To SSH into this box, run `$ vagrant ssh` from the `pardot-askeet` directory on the host machine.
 * Root password is `root`
 * MySQL credentials are `root`, `root`
-
-## Windows Perils
-Have no idea if this works on Windows
+* Does this work with VMware? No idea, haven't tried.
+* Does this work on Windows? No idea, haven't tried.
+* Apache error log is located at /var/log/httpd/master_error.log
 
 # Features
 ## Puppet

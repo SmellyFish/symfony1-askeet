@@ -6,7 +6,7 @@ class phpunit::params {
       $package = 'php5-cli'
     }
     'RedHat': {
-      $package = 'php56u-cli'
+      $package = 'php54-cli'
     }
     default: {
       fail("Unsupported platform: ${::osfamily}")

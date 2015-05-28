@@ -17,7 +17,7 @@ class php::params {
       $httpd_conf_dir = '/etc/apache2/conf.d'
     }
     default: {
-      $php_package_name = 'php56u'
+      $php_package_name = 'php54'
       $php_apc_package_name = 'php-pecl-apc'
       $common_package_name = 'php-common'
       $cli_package_name = 'php-cli'
