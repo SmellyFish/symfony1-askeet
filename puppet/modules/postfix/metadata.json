@@ -1,0 +1,47 @@
+{
+  "types": [
+
+  ],
+  "checksums": {
+    "templates/virtual_forwardings.cf": "ee1d9e82a540a9f99bbc3d9e39a4ed73",
+    "templates/virtual_limit_maps.cf": "da75a1ea17f3331d3b5d19869638d0fc",
+    "spec/classes/postfix_spec.rb": "d62553275d81ed01e7a2ffaa760cac59",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "LICENSE": "c74fe751e4f22ed7e9aa8ab0caa2ec1a",
+    "templates/virtual_domains.cf": "e6002d4a3be04e0067d5785ec8d1b203",
+    "spec/classes/postfix_relay_spec.rb": "2cd0ce44a5795134eaf2a974f1b72920",
+    "Rakefile": "3ad4cb18c60f35a08549e5930a4d142c",
+    "manifests/relay.pp": "c62bcdc09faced85b7e49ba7e22185ba",
+    "manifests/config.pp": "771b16e493fc0ca4aa94f2f910100385",
+    "tests/init.pp": "b75712e8cfac7241221776048da7c871",
+    "manifests/init.pp": "86a748ce701776a5c1e55a8a65915084",
+    "templates/virtual_transports.cf": "7ebc716e478d7747f0349f32879aece0",
+    "Modulefile": "d46959ccd0fd1aad8b15adf5ddd8a3b7",
+    "manifests/config/maincf.pp": "f1ef8467f5245bf39137563bc339e897",
+    "manifests/postgres.pp": "9f0c0e420d5eb0aa6e14d82f1a3b3a6f",
+    "templates/virtual_mailboxes.cf": "a56c7f1763cdd465c6dd30d80340bbee",
+    "spec/fixtures/augeas/etc/postfix/master.cf": "08e63cf9b956a649776f8f92e50e4ab0",
+    "spec/defines/maincf_spec.rb": "2c8752bfc539dfa92618f2287e829004",
+    "Gemfile.lock": "f96911d97922282bf9ce9550a90b48a1",
+    "spec/spec_helper.rb": "084a8440dd7ee14ec555c83f601bcf89",
+    "README.markdown": "c29e30f19ef6da28ab8e5cf395cb3f32",
+    "spec/fixtures/augeas/etc/postfix/main.cf": "5d88bcaab317db5971b3e1d5cd9f3874",
+    "manifests/config/maincfhelper.pp": "2708b83adfdf83dc0a0ab8c5961a2623",
+    "spec/fixtures/augeas/etc/init.d/postfix": "d41d8cd98f00b204e9800998ecf8427e",
+    "manifests/config/mastercf.pp": "f740b67997523d465f3aee01dbce7695",
+    "templates/virtual_email2email.cf": "73355c703ed6c16cec7f34f2ffc7abff",
+    "spec/defines/mastercf_spec.rb": "5ca825b739ab53ec384f6fde9a77caa9",
+    "Gemfile": "44c72d17bb99293e63911c0fd5bb0aed"
+  },
+  "source": "https://github.com/mjhas/postfix.git",
+  "author": "mjhas",
+  "dependencies": [
+
+  ],
+  "project_page": "https://github.com/mjhas/postfix",
+  "summary": "",
+  "description": "This Postfix Module installs postfix and configures it using Augeas",
+  "version": "0.0.5",
+  "name": "mjhas/postfix",
+  "license": "Apache License 2.0"
+}

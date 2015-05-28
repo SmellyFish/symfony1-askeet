@@ -1,0 +1,28 @@
+{
+  "name": "ckhall-remi",
+  "version": "0.0.2",
+  "source": "http://github.com/ckhall/puppet-module-remi",
+  "author": "ckhall",
+  "license": "Apache License, Version 2.0",
+  "summary": "Setup the remi package repo",
+  "description": "Setup the remi package repo on Centos/RHEL et all",
+  "project_page": "http://github.com/ckhall/puppet-module-remi",
+  "dependencies": [
+    {
+      "name": "stahnma/epel",
+      "version_requirement": "0.0.3"
+    }
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "Modulefile": "7170baa6035478e994e7a22954c4f5d0",
+    "README.md": "5e44aab885c82dd0e263919d5a0b99a3",
+    "files/RPM-GPG-KEY-remi": "3abb4e5a7b1408c888e19f718c012630",
+    "lib/facter/os_maj_version.rb": "0f19c87eca831a094fe83b1a79937b76",
+    "manifests/init.pp": "b073f9e296df2d9bab2a71a776edb3d2",
+    "manifests/rpm_gpg_key.pp": "d23cf1e68bfafdff530b047798a2c1ce",
+    "tests/init.pp": "9c7a4fec81abab2f9435538161b7ecb8"
+  }
+}

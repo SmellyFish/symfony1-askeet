@@ -1,0 +1,9 @@
+---
+firewall::ensure: 'stopped'
+
+databases::database:
+  askeet:
+    user: 'root'
+    password: 'root'
+    host: 'localhost'
+    grant: 'ALL'
