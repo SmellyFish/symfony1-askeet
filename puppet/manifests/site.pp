@@ -47,6 +47,12 @@ apache::vhost { 'master':
       'options'           => ['+ExecCGI', '-MultiViews', '+SymLinksIfOwnerMatch'],
     },
   ],
+  aliases => [
+    {
+      'alias'             => '/sf',
+      'path'              => '/usr/share/pear-data/symfony/web/sf',
+    },
+  ],
 }
 
 class { 'php::cli':

@@ -35,7 +35,7 @@ Vagrant set up to be used with the Symfony 1 Askeet tutorial.
 6. Begin the [askeet tutorial](http://symfony.com/legacy/doc/askeet/1_0/en/1) starting with initializing the Symfony project
 
 ## Notes
-* The project is accessible by browser at http://askeet.local:8080/
+* The project is accessible by browser at http://askeet.local:8080/index.php
 * The box comes with Symfony 1.0.22 pre-installed.
 * Host machine - the actual computer you're using. This machine is used to run Git commands, Vagrant commands, boot up the guest machine, etc.
 * Guest machine - the virtual server spun up by the host machine via Vagrant. To SSH into this box, run `$ vagrant ssh` from the `pardot-askeet` directory on the host machine.
