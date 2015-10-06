@@ -6,7 +6,7 @@ Vagrant set up to be used with the Symfony 1 Askeet tutorial.
 ## Prerequisites: Install Virtual Box and Vagrant
 
    - [Virtual Box](https://www.virtualbox.org/wiki/Downloads). Tested with 4.3.18
-   - [Vagrant](https://www.vagrantup.com/downloads.html). Tested with 1.6.5
+   - [Vagrant](https://www.vagrantup.com/downloads.html). Tested with 1.6.5 and 1.7.4
 
 ## Setup
 
