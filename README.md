@@ -41,7 +41,7 @@ Vagrant set up to be used with the Symfony 1 Askeet tutorial.
 
 		$ cd /var/www/askeet
 		
-6. Begin the [askeet tutorial](http://symfony.com/legacy/doc/askeet/1_0/en/1) starting with initializing the Symfony project
+6. Begin the [askeet tutorial](http://symfony.com/legacy/doc/askeet/1_0/en/1) starting with initializing the Symfony project ( **Symfony has already been installed for you**)
 
 ## Notes
 * The project is accessible by browser at http://askeet.local:8080/index.php
